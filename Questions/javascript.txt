@@ -1,0 +1,248 @@
+ 1. - Scopes and Closures ?
+ A:
+ Global Scope(attached to 'window)
+ Local Scope(insode a function)
+ execution stack 
+ use local Scope
+
+ Function scope --
+When you declare a variable in a function, you can access this variable only within the function. You can’t get this variable once you get out of it.
+
+ Block Scope -- 
+ When you declare a variable with const or let within a curly brace ({}), you can access this variable only within that curly brace.
+
+ Functions, when declared with a function declaration, are always hoisted to the top of the current scope.
+
+  function hoisting can potentially be confusing, and should not be used. Always declare your functions before you use them.
+
+  Functions do not have access to each other’s scopes when you define them separately, even though one function may be used in another.
+
+  When a function is defined in another function, the inner function has access to the outer function’s variables. This behavior is called lexical scoping.
+
+  However, the outer function does not have access to the inner function’s variables.
+  Closures-----------------------------------------------
+  Whenever you create a function within another function, you have created a closure. The inner function is the closure. This closure is usually returned so you can use the outer function’s variables at a later time.
+
+   they are usually used for two things:
+
+To control side effects
+To create private variables
+
+As you know by now, variables created in a function cannot be accessed outside the function. Since they can’t be accessed, they are also called private variables.
+-------------------------------------------------
+2.How does the internet work?
+A: web pages are files on a servers hard drive 
+ servers have ip addressed which help them and other cpus find each other
+
+ packets 
+ router directs packets to and from cpu 
+ ---------------------------------------
+3.How does a browser work?
+A.: websites are either dynamic or stored on a server, 
+ip -- internet protocol 
+browser contacts dns - each domain is mapped into an IP address
+request to the page -- package of data, with type of request,headers,meta data, 
+response from the page -- meta data and html code 
+html,css,js 
+hypertext markup langauge
+front end frameworks and backend frameworks
+mobile requests want json  a data format
+app knows how to parse that data with the source code 
+---------------------------------------------------
+4.What is HTTP? Difference b/w types of requests.
+A:  hypertext Transfer Protocol Secure 
+encrypted end to end 
+how a request should look 
+
+certficate authority 
+private key and pri key 
+certficate signing request
+self-signed certficate
+
+
+a request way to exchange between client and serverclient sends request and the server responds to the request
+sent to specific URL
+message returned by server is the response 
+can send and receive files
+xml 
+ REQUEST COMPONENTS
+-- METHOD GET,POST,DELETE,UPDATE,PUT
+-- Data
+-- headers 
+-- authentication - can be included in data or headers(token)
+response COMPONENTS 
+-- data
+-- headers
+-- status code 200,400,404, 505
+1xx = informationl
+2xx = success
+3xx = redirect
+4xx = Client Error
+404 = Not Found
+5XX = Server Error 
+
+requests are blocking 
+requets can be generic 
+
+
+
+
+
+----------------------------
+5.What is the box model?
+A: css 
+block boxes and inline boxes 
+If a box is defined as a block, it will behave in the following ways:
+
+- The box will break onto a new line.
+- The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.
+- The width and height properties are respected.
+- Padding, margin and border will cause other elements to be pushed away from the box
+If a box has an outer display type of inline, then:
+
+- The box will not break onto a new line.
+- The width and height properties will not apply.
+- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
+- Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+ **Content – this is the region in which video, images, text are displayed. In addition to the content itself, the dimensions (height, width) of the content are included in this layer as well. 
+
+** Padding – this determines the dimensions of a transparent perimeter separating the content and the border.
+** Border – this determines any visible border around a specific set of content as well as its width and color.
+** Margin – this is an additional perimeter which determines the separation from the border and the rest of the elements on the page.
+
+When it comes to padding vs. margins, the former is vital to creating parameters which separate the border from the content while the latter separates the whole package from other elements on the page, and both are important for coherent layout of web elements
+----------------------------------
+6. What is a promise?
+help avoid callback hell - 
+A: guarantee that we are going to do something in the future. Because promises can only be made for the future.
+a promise is an object that has 3 states
+Pending - Initial State before the promise succeds or fails
+Resolved - Completed Prromise
+Rejected - Failed Promise 
+
+The main difference between Callback Functions and Promises is that we attach a callback to a Promise rather than passing it. So we still use callback functions with Promises, but in a different way (chaining).
+
+const myPromise = new Promise();
+
+const myPromise = new Promise((resolve, reject) => {  
+    // condition
+});
+.then() - only for resolved promises
+.catch() - 
+----------------------------------
+7.What is AJAX?
+
+A: 
+ Asynchronous JavaScript And XML.
+
+AJAX just uses a combination of:
+
+A browser built-in XMLHttpRequest object (to request data from a web server)
+JavaScript and HTML DOM (to display or use the data)
+
+AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page
+
+1. An event occurs in a web page (the page is loaded, a button is clicked)
+2. An XMLHttpRequest object is created by JavaScript
+3. The XMLHttpRequest object sends a request to a web server
+4. The server processes the request
+5. The server sends a response back to the web page
+6. The response is read by JavaScript
+7. Proper action (like page update) is performed by JavaScript
+ requets without reload 
+ talks to server via xhr/https request
+ xhr isnt xml 
+ ajax is usually text file,json
+
+ jsonp same origin policy does not apply 
+
+
+-----------------------------------
+8.Why do we use ORMs?
+A:
+
+Object Rational Mapping 
+sql dtaabase is expecting a sql query 
+gives us the mechanism by which to perform orm we end up with classes that represent a table in our db 
+generstes a sql query 
+-- less time interacting with database 
+-- improves sql queries if you are weak at them. 
+-- not great at highly optimized query 
+-- overhead to learning an orm library 
+-- require some configuration
+-- may nay not help your db skills
+
+ ORM Libraries 
+  code-first -- 
+  -- library reads the code to determine teh data base schema and applies that schema to the db
+
+  -- Go
+  -- Eloquent(Lavarel)
+
+  schema First ORM 
+  schema already defined and generates from it all the code to interact with the database
+  - SQLBoiler 
+
+----------------------------------
+ 9. What is ACID?
+ A:
+ In the context of transaction processing, the acronym ACID refers to the four key properties of a transaction: atomicity, consistency, isolation, and durability.
+
+Atomicity
+All changes to data are performed as if they are a single operation. That is, all the changes are performed, or none of them are.
+For example, in an application that transfers funds from one account to another, the atomicity property ensures that, if a debit is made successfully from one account, the corresponding credit is made to the other account.
+Consistency
+Data is in a consistent state when a transaction starts and when it ends.
+For example, in an application that transfers funds from one account to another, the consistency property ensures that the total value of funds in both the accounts is the same at the start and end of each transaction.
+any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof.
+
+Isolation
+The intermediate state of a transaction is invisible to other transactions. As a result, transactions that run concurrently appear to be serialized.
+For example, in an application that transfers funds from one account to another, the isolation property ensures that another transaction sees the transferred funds in one account or the other, but not in both, nor in neither.
+Durability
+After a transaction successfully completes, changes to data persist and are not undone, even in the event of a system failure.
+For example, in an application that transfers funds from one account to another, the durability property ensures that the changes made to each account will not be reversed.
+
+-------------------------------------------
+10.What is a transaction?
+A:
+a transfer of funds from one bank account to another, even involving multiple changes such as debiting one account and crediting another, is a single transaction.
+
+A database transaction symbolizes a unit of work performed within a database management system (or similar system) against a database, and treated in a coherent and reliable way independent of other transactions. A transaction generally represents any change in a database. Transactions in a database environment have two main purposes:
+To provide reliable units of work that allow correct recovery from failures and keep a database consistent even in cases of system failure, when execution stops (completely or partially) and many operations upon a database remain uncompleted, with unclear status.
+To provide isolation between programs accessing a database concurrently. If this isolation is not provided, the programs' outcomes are possibly erroneous.
+
+
+--------------------------------------------
+11:What is the n+1 problem?
+ -- The N+1 problem happens as a result of so called “lazy-loading”.
+-- Lazy loading of data from the database happens when a query is made for a parent record, and then an additional query for every single child record.
+
+inhibits scalalabilty. 
+
+A:
+
+--------------------------------------------
+12.What is REST?
+A:
+
+REpresentational State Transfer (REST) is an architectural style that handles the client-server relationship, with the purpose of aiming for speed and performance by using re-usable components.
+
+ SOAP (Simple Object Access Protocol) as REST uses the less bandwidth and is simpler and more flexible for internet usage. 
+
+ Whenever a RESTful API is called, the server will transfer to the client a representation of the state of the requested resource.
+
+ Stateless: Meaning the client data is not stored on the server, the session is stored client-side (typically in session storage).
+Client<->Server: There is a separation of concerns between the front-end (client) and the back-end (server). They operate independently of each other and both are replaceable.
+Cache: Data from the server can be cached on the client, which can improve performance speed.
+URL Composition: We use a standardized approach to the composition of base URLs. For example, a GET request to /cities, should yield all the cities in the database, whereas a GET request to /cities/seattle would render the city with an ID of seattle. Similarly, REST utilizes standard methods like GET, PUT, DELETE and POST to perform actions. Which we’ll take a look at in the next section!
+So we can define a RESTful API as one that is stateless, it separates concerns between client-server, it allows caching of data client-side and it utilizes standardized base URLs and methods to perform the actions required to manipulate, add or delete data.
+
+HTTP has five methods which are commonly used in a REST based architecture: POST, GET, PUT, PATCH, and DELETE. In fact they correspond to create, read, update, and delete (CRUD) operations respectively. It should also be noted that there are other methods which are less frequently used, such as OPTIONS and HEAD.
+GET: This method is used to read (or retrieve) a representation of a resource. If all is well, GET returns a representation in XML or JSON and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).
+POST: This method is often utilized to create new resources. In particular, it’s used to create subordinate resources. That is, subordinate to some other (e.g. parent) resource. On successful creation, it returns HTTP status 201, returning a location header with a link to the newly-created resource with the 201 HTTP status.
+PUT: It’s used for updating capabilities and also to create a resource (in the case where the resource ID is chosen by the client instead of the server). Essentially PUT is to a URL that contains the value of a non-existent resource ID. A successful update returns 200 (or 204 if not returning any content in the body) from a PUT. If using PUT for create, it returns HTTP status 201 on successful creation.
+PATCH: It’s used for modify capabilities. The PATCH request only needs to contain the changes to the resource, not the complete resource. This is similar to PUT, however the body contains a set of instructions describing how a resource currently residing on the server should be modified to produce a new version. So the PATCH body should not just be a modified part of the resource, but in some kind of patch language like JSON Patch or XML Patch.
+DELETE: Fairly self explanatory, it’s used to delete a resource identified by a URL. Upon successful deletion, it returns HTTP status 200 (OK) along with a response body.
+
+--------------------------------------------

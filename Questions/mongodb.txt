@@ -1,0 +1,60 @@
+
+
+It is a document-oriented database that is used for high availability, easy scalability, and high performance. It supports the dynamic schema design.
+
+Explain the replica set.
+It is a group of mongo instances that maintains the same dataset. Replica sets provide redundancy and high availability and are the basis for all production deployments.
+
+There are three main features of MongoDB:
+
+Automatic scaling
+High performance
+High availability
+
+What is Sharding?
+In MongoDB, sharding means to store data on multiple machines.
+
+8) What is the syntax to create a collection and to drop a collection in MongoDB?
+
+Syntax to create collection in MongoDB is db.createCollection(name,options)
+Syntax to drop collection in MongoDB is db.collection.drop()
+
+To inspect a source code of a function, without any parentheses, the function must be invoked.
+
+Mention what is Objecld composed of?
+
+Objectld is composed of
+
+Timestamp
+Client machine ID
+Client process ID
+3 byte incremented counte
+
+Explain what is the role of profiler in MongoDB?
+
+MongoDB database profiler shows performance characteristics of each operation against the database. You can find queries using the profiler that are slower than they should be
+
+Journaling is the feature in MongoDB that you can use to do safe backups.
+
+What is Aggregation in MongoDB?
+In MongoDB, aggregations are operations that process data records and return computed results.
+
+20. Define Namespace in MongoDB.
+It is the concatenation of the collection name and the name of the database.
+
+How does Journaling work in MongoDB?
+Write operations are saved in memory while journaling is going on. The on-disk journal files are really dependable for the reason that the journal writes are habitual. Inside dbPath, a journal subdirectory is designed by MongoDB.
+
+23. Explain Replication.
+Replication is the process of synchronizing data across multiple servers.
+
+24. What is the use of an Index in MongoDB?
+In MongoDB, indexes provide high-performance read operations for frequently used queries.
+
+If you have any doubts or queries related to MongoDB, get them clarified from MongoDB Experts on our MongoDB Community!
+
+Command syntax Db.isMaster() will tell you whether you are on the master server or not. MongoDB allows only one master server, while couchDB allows multiple masters.
+
+Explain what is GridFS in MongoDB?
+
+For storing and retrieving large files such as images, video files and audio files GridFS is used. By default, it uses two files fs.files and fs.chunks to store the file’s metadata and the chunks.
