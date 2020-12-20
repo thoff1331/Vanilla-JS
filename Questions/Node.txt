@@ -1,0 +1,30 @@
+Javascript engines complies code to a langauge that the computer can read.
+
+// Node created by Ryan Dahl is a run-time enviroment for javascript code. 
+
+rs.readfile()
+http.createServer()
+not a language or  a fremwork 
+------------------------------
+non-blocking asyncgronous nature
+thread can serve multiple threads
+puts the request in the event q
+
+calling functions from the window object it could call a different function with the same name in a different file
+creating modules helps us with that issue. each file is consideed modules. modules are private unless they are exported.
+
+Node.js applications simply output the data in chunks and never buffer any data.
+
+require argument is local to each module 
+
+
+path module
+
+u
+Major security implementations in Node.js are:
+
+Authentications
+Error Handling
+
+
+a method is a function inside of a class 
