@@ -1,11 +1,78 @@
-twoSum = (arr,target) => {
-  for(let i = 0; i < arr.length;i++) {
-  for(let j = i; j <  arr.length;j++) {
-    if( arr[i] + arr[j] === target) {
-      return [i,j]
-    }
-  }  
-  }
+const map = {
+a1: 1,
+a2: 0,
+a3: 1,
+a4:0,
+a5: 1,
+a6: 0,
+a7: 1,
+a8: 0,
+b1: 0,
+b2: 1,
+b3: 0,
+b4 :1,
+b5: 0,
+b6: 1,
+b7: 0,
+b8: 1,
+c1: 1,
+c2: 0,
+c3: 1,
+c4:0,
+c5: 1,
+c6: 0,
+c7: 1,
+c8: 1,
+d1: 0,
+d2: 1,
+d3: 0,
+d4:1,
+d5: 0,
+d6: 1,
+d7: 0,
+d8: 1,
+e1: 1,
+e2: 0,
+e3: 1,
+e4:0,
+e5: 1,
+e6: 0,
+e7: 1,
+e8: 0,
+f1: 0,
+f2: 1,
+f3: 0,
+f4:1,
+f5: 0,
+f6: 1,
+f7: 0,
+f8: 1,
+g1: 1,
+g2: 0,
+g3: 1,
+g4: 0,
+g5: 5,
+g6: 0,
+g7: 1,
+g8: 0,
+h1: 0,
+h2: 1,
+h3: 0,
+h4:1,
+h5: 0,
+h6: 1,
+h7: 0,
+h8: 1,
+
+
+
 }
 
-twoSum([2,7,8,,10,14],24)
+function chessBoardCellColor(cell1, cell2) {
+   cell1 = cell1.toLowerCase()
+   cell2 = cell2.toLowerCase()
+   return  map[cell2] == map[cell1]
+}
+
+
+chessBoardCellColor('a1','h3')
