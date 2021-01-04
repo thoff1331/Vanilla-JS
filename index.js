@@ -1,10 +1,3 @@
-function depositProfit(deposit, rate, threshold) {
-let year = 0;
-while( threshold > deposit) {
-  deposit += deposit * (rate/100)
-  year++
-}
-return year
-}
+let arr = [1,2,3,4,5,6,7]
 
-depositProfit(100,20,7000)
+console.log(arr.fill(8,0))
