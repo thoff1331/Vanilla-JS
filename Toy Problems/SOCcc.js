@@ -21,18 +21,18 @@
 
 // fib(8)
 
-add = expression => {
-  let arr =  expression.split('')
-  let count = parseInt(arr[0])
-  for(let i = 1; i < arr.length;i++) {
-    if(arr[i] === '+') {
-      count = count + parseInt(arr[i + 1])
-    } else if(arr[i] === '-') {
-      count = count  - parseInt(arr[i + 1 ]) 
-    }
-  }
-  return count
-}
+// add = expression => {
+//   let arr =  expression.split('')
+//   let count = parseInt(arr[0])
+//   for(let i = 1; i < arr.length;i++) {
+//     if(arr[i] === '+') {
+//       count = count + parseInt(arr[i + 1])
+//     } else if(arr[i] === '-') {
+//       count = count  - parseInt(arr[i + 1 ]) 
+//     }
+//   }
+//   return count
+// }
 
-add('3+6-9')
+// add('3+6-9')
 

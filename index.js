@@ -1,10 +1,26 @@
-const findSum = inputArray => inputArray.reduce((acc, val) => acc + val);
-const maximumSum = (arr = [], num = 1) => {
-   let left = 0, right = left + num;
-   let sum = findSum(arr.slice(left, right));
-   for(; right <= arr.length; right++, left++){
-      sum = Math.max(findSum(arr.slice(left, right)), sum);
-   };
-   return sum;
-};
-maximumSum([2, 3, 5, 1, 6],3)
+// fib = n => {
+//   let arr = [1]
+//   let a = 1;
+//   let b = 1
+//   for(let i = 2; i < n; i++) {
+//     let c = a + b
+//     a = b
+//     b = c
+//     arr.push(b)
+//   }
+//   return b
+// }
+
+// fib(3)
+
+biggestNum = arr => {
+let num = arr[0]  
+for(let i = 1; i < arr.length;i++) {
+  if(arr[i] > num) {
+    num = arr[i]
+  }
+}
+return num
+}
+
+biggestNum([1,2,3,4000,4,5,88,101])
