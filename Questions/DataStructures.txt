@@ -1,0 +1,250 @@
+* Array *
+
+Advantages
+Simple to create and use.
+Foundational building block for complex data structures
+Disadvantages
+Fixed size
+Expensive to insert/delete or resequence values
+Inefficient to sort
+
+Applications
+Basic spreadsheets
+Within complex structures such as hash tables
+
+*******************************************
+
+
+* Stacks *
+
+last in first out... last item put in will be first one removed.
+push 
+pop
+peek 
+length 
+size 
+you can use an array as a stack 
+*******************************
+
+* Sets *
+ -- similar to an array but cannot have dupicates 
+  below methods are  not in es6
+  union -- combines two sets
+ intersection -- items that are in both sets 
+ difference -- all items that are not in both sets 
+ subset -- test if one set is completely contained within anther set
+set.delete instead of remove
+set.add adds and the returns the set
+************************************
+
+* Queue *
+
+First in Fisrt Out 
+
+ordering  food at a drive through 
+ --- Methids --- 
+enque add item to end 
+deque - removes item at the front of Queue
+front -- reveals which item is at the 0 index 
+size -- determines the length
+isEmpty -- check if queue has a length 
+
+priority queue 
+
+elements with higher priority are sent to the front of the queue 
+
+Advantages
+Dynamic size
+Orders data in the order it was received
+Low runtime
+
+Disadvantages
+Can only retrieve the oldest element
+
+Advantages 
+
+Effective as a buffer when receiving frequent data
+Convenient way to store order-sensitive data such as stored voicemails
+Ensures the oldest data is processed first
+
+
+****************************************
+*Binary  search tree*
+leaf has no children 
+
+only two branches for every node 
+orrdered each subtree is equal to less than the parent node 
+
+each right subtree is  greater than or equl to parent node.
+
+add 
+remove
+findMin 
+FindMax
+isPresent
+
+Tree hight and traversal 
+
+distance from the root not to the leaf noot 
+
+minheight
+maxheight root node 
+
+is balanced =  max and min height differ by 1 
+
+balanced is more efficent to search the tree 
+
+inOrder traversal -- left most node to the right most node 
+preOrder traversal  -- explores root nodes first than leaf
+postOrder traversal  -- expores the leaf nodes before root nodes.. any node with children is a root node 
+
+level Order traversal -- explores nodes at each level from left to right starting at the root most root node 
+
+
+Advantages
+
+Ideal for storing hierarchical relationships
+Dynamic size
+Quick at insert and delete operations
+In a binary search tree, inserted nodes are sequenced immediately.
+Binary search trees are efficient at searches; length is only O(height).
+
+Disadvantages
+
+Slow to rearrange nodes
+Child nodes hold no information about their parent node
+Binary search trees are not as fast as the more complicated hash table
+Binary search trees can degenerate into linear search (scanning all elements) if not implemented with balanced subtrees.
+
+Applications
+
+Storing hierarchical data such as a file location.
+Binary search trees are excellent for tasks needing searching or ordering of data.
+
+*****************************************
+* Hash Tables *
+
+collision -- two keys get matched to the same hash
+solution to a collision -- store both values at that number and then upon lookup sort out the incorrect one 
+
+buckets are like the indexes 
+
+used to implement objects 
+
+add 
+remove 
+lookup 
+Advantages
+Key can be in any form, while array’s indices must be integers
+Highly efficient search function
+Constant number of operations for each search
+Constant cost for insertion or deletion operations
+Disadvantages
+
+Collisions: an error caused when two keys convert to the same hash code or two hash codes point to the same value.
+These errors can be common and often require an overhaul of the hash function.
+
+Applications
+Database storage
+Address lookups by name
+
+
+
+
+*******************************************
+
+* Linked Lists *
+element and reference to the next node
+different between ll and arrays 
+dynamic size 
+efficient insertion and deletion
+No random access 
+No waste of Memory becuase of dynmaic size 
+sequetional access is slow because elements are not in contigious memory locations. 
+
+head node and a head pointer, last node links to null 
+you start at the head 
+add - adds at  end 
+remove 
+size 
+isEmpty 
+indexOf
+elementAt
+addAt adds at certain index
+removeAt - removes ar certain index
+
+Advantages
+
+Efficient insertion and removal of new elements
+Less complex than restructuring an array
+
+
+Disadvantages
+
+Uses more memory than arrays
+Inefficient to retrieve a specific element
+Inefficient to traverse the list backward
+
+Applications
+
+Best used when data must be added and removed in quick succession from unknown locations
+
+****************************************
+
+*Trie*
+
+prefix treee 
+
+stores data in steps. 
+validate that a word is in a dictionary 
+
+
+******************************************
+
+* Heap *
+
+
+max heap -- all parent nodes are greater than or equal to their child 
+
+min heap -- all parent nodes are lesser than or eqaul to their child
+
+order doesn't matter if they are on the same level 
+no index zero 
+
+use equations for certain elements in the heap 
+
+******************************************
+
+* Graph *
+
+
+data in graph -- vertices
+
+conectiosn between vertices -- edges
+
+durected and undirected graphs
+
+adjacency list 
+adjacency matrix 
+incidence matrix 
+weighted edges 
+
+breadth first search 
+
+traversal -- 
+breadth first search -- how close nodes are to a root node 
+
+
+wether two people are freinds 
+
+
+
+
+
+
+
+
+
+
+
+************************************************
