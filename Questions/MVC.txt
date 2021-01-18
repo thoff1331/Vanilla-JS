@@ -1,0 +1,10 @@
+Model View Controller 
+
+Models
+ -- Models manage the data for an application.
+
+ Views
+-- Views are a visual representation of models that present a filtered view of their current state.
+
+Controllers
+-- Controllers are intermediaries between models and views, which are classically responsible for updating the model when the user manipulates the view. 

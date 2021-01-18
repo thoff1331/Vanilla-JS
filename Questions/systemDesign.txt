@@ -1,0 +1,81 @@
+Benefits of design patterns
+
+--- Proven Solutions 
+-- easily reusable
+-- expressive 
+-- they ease communication
+-- prevent th need for refactoring 
+-- lower the size of the codebase 
+
+code is interertated instead of compiled 
+first class functions -- you can pass functions as parameters to other functions just like you would any other variable 
+
+JS is prototype based 
+JavaScript Event Loop runs on first in first out status
+run to completion, the event in the eevnt loop is finished first including callbacks before it is dequeed 
+
+
+prot-patterns
+
+a patern to be if it passes a period of testing by various developers and us seen to be useful and give correct results. 
+
+anti-patterns
+
+-- altering the object class prototype or altering an object you don't own 
+Design pattern categories 
+
+-- Creational 
+-- Structural 
+--Behavioral 
+-- Concurrency
+-- Arvhitectural
+
+Creational Design patterns -- Optimize Object Cretion
+Factory Method
+abstract factory 
+Builder 
+prototype
+Singleton 
+
+Structural Design patterns -- Ensure if one part of the system changes that the entire system doesn't need to change
+-- adapter
+-- Bridge 
+-- Composite
+-- Decorator
+-- facade
+-- Flyweight
+-- Proxy
+
+Behavioral Design patterns -- Recognize, implement,and Improve communication, they Ensure that disparte parts of a systems have synchronized information
+-- Chain of Responsibility 
+-- Command 
+-- Iterator 
+-- Mediator 
+-- Memento
+-- Observer
+-- State
+-- Strategery 
+-- Visitor 
+
+Concurrency Design pattern -- Deal with multi-threaded programmining parardigms
+
+-- Active Object 
+-- Nuclear refactoring
+-- Scheduler 
+
+Arvhitectural Design pattern -- Design patterns which are used for architectural purposes.
+
+-- MVC - Model View Controller
+-- MVP -  Model View presenter 
+-- MVVM - Model View ViewModel
+
+Constructor Pattern
+
+When thinking about classical object-oriented languages, a constructor is a special function in a class which initializes an object with some set of default and/or sent-in values.
+
+ A closure is a function with access to the parent scope, even after the parent function has closed. They help us mimic the behavior of access modifiers through scoping. Let’s show this via an example:
+
+Singleton Pattern
+
+The singleton pattern is used in scenarios when we need exactly one instance of a class. For example, we need to have an object which contains some configuration for something. In these cases, it is not necessary to create a new object whenever the configuration object is required somewhere in the system.
+
