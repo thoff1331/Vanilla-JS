@@ -1,0 +1,10 @@
+what is prop drilling in react?
+
+threading or drilling props into certain parts of your application through certain parts that do not need it to allow access of those props to parts of the application that do need it.
+
+
+What is graphy theory ?
+
+
+what is the context API
+

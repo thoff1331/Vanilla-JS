@@ -1,0 +1,16 @@
+var declarations are globally scoped when they are declared outside of a function 
+
+Hoisting moves variables to the top of their scope before undefined. 
+
+when hoisted var declarations are initialized with undefined
+var becomes a problem when you do not realize that a variable has already been defined before
+
+let is block scoped
+let can be updated but not re-declared 
+
+
+const declarations are block scoped 
+const cannot be updated or re-declared
+props of a const object can be updated.
+
+const and let declarations are not initialized when being hoisted

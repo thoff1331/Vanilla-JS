@@ -11,8 +11,8 @@
 
 // forEach 
 
-// does whatever is in the function to each element  in the array  no return value 
-
+// does whatever is in the function to each element  in the array  no return value  does not mutate original array 
+// function(currentVal,index,value)
 // some
 
  // checks if any of the elements in the array meets the condtional provided and returns true or false if none do.
@@ -36,3 +36,7 @@
 // includes 
 
 // returns wether or not the array has a value you pass to it either a number or a string 
+
+// Length returns how many elements are in the array 
+
+// sort by default goes smallest to largest 

@@ -79,3 +79,113 @@ Singleton Pattern
 
 The singleton pattern is used in scenarios when we need exactly one instance of a class. For example, we need to have an object which contains some configuration for something. In these cases, it is not necessary to create a new object whenever the configuration object is required somewhere in the system.
 
+Networks and protocols 
+
+IP - Internet Protocol -- instructs us how most communication  across Internet Networks must be implemented. info comes in packets 
+Header -- contains meta data about the packet such as the ip address of the source and destination ip address 
+
+The User Datagram Protocol (UDP) --  is a very thin protocol build on top of the Internet Protocol. The basic unit of data is a User datagram and the UDP protocol provides the same unreliable, connectionless service transferring user datagrams as the IP protocol does transferring its datagrams. The main difference is that the UDP protocol is an end-to-end protocol. That is, it contains enough information to transfer a user datagram from one process on the transmitting host to another process on the receiving host. The format of a user datagram is illustrated below:
+
+TCP -- Transmission Control Protocol -- this ensures all data is reliabily received in the correct order, it is built on top of IP 
+
+HTTP -- Hyper Text Transfer Protocol
+-- the request response pattern for client server interactions. A browser is a client, and a web-server is a server.  When a server requests data from another server then the first server is also a client, and the second server is the server.
+
+DNS -- Domain Network System helps internet users and network devices discover human readble hostnames instaed of numeric ip addresses
+
+So this request-response cycle has its own rules under HTTP and this standardizes how information is transmitted across the internet.  The most common verbs are get post, put and delete 
+
+*********************************************************
+
+Storage Latencey and throughput
+
+Memory storage -- non persistent -- Ram. faster 
+Disk Storage -- persistent -- hard disk
+Latencey -- teh measire of a duration for an action to complete something or produce a result.
+
+throughput -- Maxiumum cpacity of a machine or ssytem 
+bottleNeck -- a restraint on the system 
+a system is only as fast as its slowest bottleNeck
+
+You can increase throughput by buying more hardware (horizontal scaling) or increasing the capacity and performance of your existing hardware (vertical scaling) or a few other ways. 
+
+**********************************************************
+System Availability 
+
+-- calculate the percentage of time that the systems primary functions and operations are available in a given window 
+
+SLA compnaies agree to provide a certain percentage of uptime 
+having redundancies for areas of the code that is considered critical for high Availability
+reducing single points of failure 
+
+**********************************************************
+
+Caching 
+ helps to reduce latency and less network calls 
+ *********************************************************
+
+ Proxies -- typically a server that acts as a middleman between a client and another server 
+
+ the proxy may sometimes mask the identity of the client  this how VPN's are built. 
+
+ *********************************************************
+
+ Load Balanacing 
+
+ distributung incoming requests load across multiple serevers through load balancers 
+
+ load balancers need to be made aware of when you add a new server and when you remove a server 
+ Round Robin 
+ and round robin weighting 
+
+
+ IP Hashing based selection -- used when you want reqest from a certian region or country to be processed by a certain server 
+
+ service based selections
+
+ hash ring 
+ virtual nodes 
+
+
+ *****************************************************
+
+ Databases 
+
+ Relational Database -- has strictly enforeced relationships bewteen things stored in the Database.
+
+ Acid 
+ Atomicity  -- requires that when a single transaction comprises of more than one operation, then the database must guarantee that if one operation fails the entire transaction (all operations) also fail.  It's "all or nothing". That way if the transaction succeeds, then on completion you know that all the sub-operations completed successfully, and if an operation fails, then you know that all the operations that went with it failed.  
+ Consistency -- requires that each transaction in a database is valid according to the database's defined rules, and when the database changes state (some information has changed), such change is valid and does not corrupt the data. Each transaction moves the database from one valid state to another valid state. Consistency can be thought of as the following:  every "read" operation receives the most recent "write" operation results.
+ Isolation --  means that you can "concurrently" (at the same time) run multiple transactions on a database, but the database will end up with a state that looks as though each operation had been run serially ( in a sequence, like a queue of operations).
+ Durability is the promise that once the data is stored in the database, it will remain so. 
+
+ Sharding data breaks your huge database into smaller databases.  You can work out how you want to shard your data depending on its structure.  It could be as simple as every 5 million rows are saved in a different shard, or go for other strategies that best fit your data, needs and locations served.
+
+ *********************************************************
+
+ Leader Election
+ 
+ Algos deterimed if one server can be the main point of contact and what to do if it fails. 
+ *********************************************************
+
+ Polling, Streaming, Sockets
+
+ Polling --  is simply having your client check on a server by sending it a network request and asking for updated data
+
+ Streaming  -- solves the constant polling problem.  If constantly hitting the server is necessary, then it's better to use something called web-sockets.
+
+This is a network communication protocol that is designed to work over TCP. It opens a two-way dedicated channel (socket) between a client and server, kind of like an open hotline between two endpoints.
+
+**********************************************************
+
+Endpoint Protection 
+rate limiting -- limit amount of request
+helps to avoid malicious flooding to shut down that server 
+**********************************************************
+
+Messaging & Pub-Sub 
+
+ idempotent operation is one that has no additional effect if it is called more than once with the same input parameters.
+
+
+

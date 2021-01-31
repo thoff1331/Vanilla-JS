@@ -6,7 +6,7 @@ A: instance of a class that has its own state, behavior and identity.
 A: attribute of an object that contains hidden data that data can be restricted to all memebers of a class.
 levels of Encapusulation are public,private,protected, internal and protected internal 
 4: Polymorphism ?
-A: assigning a value or behavior in a subclass to something that was already declared in the main class\
+A: assigning a value or behavior in a subclass to something that was already declared in the main class\=====
 5: inheritance ?
 A: one class shares structure and behavior defined in another class.  if applied to one class it is called single else multiple inheritance. 
 6: manipulators ?

@@ -1,0 +1,27 @@
+Test Driven Development revolves around 3 steps 
+
+1. Writing a test for a small part of a functionality and checking that this new test is failing (Red step)
+ 2. Writing the code that makes the test pass, then checking that your previous test and the new one are successful (Green step)
+ 3. Refactoring the code to make sure it is clear, understandable, and behaves well with the previous functionalities.
+
+ Test: A test is a block of code that declares a provable statement.
+ Assertion: An assertion is a single statement which checks whether a value meets our expectation
+
+ Solid Principles
+ -- S: Single Responsibility 
+ -- O: Open/Closed
+ -- L: Liskov Substituition
+ -- I: Interface Segregation
+ -- D: Dependency Injection
+
+
+ Single Responsibility Principle -- 
+ Each Class or function should have only one signle Responsibility
+
+ Open/Closed Principle -- Code should be open for extension but closed for modification
+
+ Liskov Substituition Principle -- Objects in an application should be replaceable with instances of thir subtypes without altering the correctness of that program
+
+ interface Segregation Principle -- Many client-specific interfaces are better than one general purpose interface
+
+ Dependency Injection Principle -- HIgh level modules should not depend on low leve modules both should depend on abstraction. Abstractions should not depend on details. Details should depend on abstractions.
