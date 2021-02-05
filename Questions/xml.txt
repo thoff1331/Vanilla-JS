@@ -1,0 +1,38 @@
+XML -- Exstensible Markup lamguage 
+markup langauge much like HTML
+designed to store and transport data
+desigbed to be self descriptive
+
+It has sender information.
+It has receiver information
+It has a heading
+It has a message body 
+
+XML does not use predefined tags
+
+It simplifies data sharing
+It simplifies data transport
+It simplifies platform changes
+It simplifies data availability
+
+XML does not carry any information about how to be displayed.
+
+The same XML data can be used in many different presentation scenarios.
+
+Because of this, with XML, there is a full separation between data and presentation.
+
+Element names are case-sensitive
+Element names must start with a letter or underscore
+Element names cannot start with the letters xml (or XML, or Xml, etc)
+Element names can contain letters, digits, hyphens, underscores, and periods
+Element names cannot contain spaces
+
+
+The XMLHttpRequest object can be used to request data from a web server.
+
+The XMLHttpRequest object is a developers dream, because you can:
+
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server  - after the page has loaded
+Send data to a server - in the background

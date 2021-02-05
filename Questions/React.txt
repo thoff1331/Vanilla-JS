@@ -1,10 +1,10 @@
 what is prop drilling in react?
 
 threading or drilling props into certain parts of your application through certain parts that do not need it to allow access of those props to parts of the application that do need it.
+what are pure components?
 
+ handle shouldComponentUpdate() method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called.
 
-What is graphy theory ?
-
-
-what is the context API
-
+ why should we not update state directly?
+ without setSate there will not be a rerender when state is changed.
+ 
